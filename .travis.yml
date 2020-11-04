@@ -1,0 +1,19 @@
+# Use Ubuntu Xenial
+dist: xenial
+
+# Use OpenJDK 11
+language: java
+jdk: openjdk11
+
+# Cache .m2 directory
+cache:
+  directories:
+    - $HOME/.m2
+
+# Do deployment once test is successful
+deploy:
+  skip_cleanup: true
+  on:
+    tags: true
+  provider: script
+  script: travis/deploy.sh

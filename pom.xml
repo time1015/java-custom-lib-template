@@ -1,0 +1,51 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>me.time1015.libs</groupId>
+    <artifactId>commons-pom</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <groupId>me.time1015.libs</groupId>
+  <artifactId>insert-artifact-id-here</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>${project.groupId}.${project.artifactId}</name>
+  <description><!-- Insert Project Description Here --></description>
+
+  <distributionManagement>
+    <repository>
+      <id>custom-libs.time1015.me</id>
+      <name>Artifactory Repository for Custom Libraries</name>
+      <url>https://time1015.jfrog.io/artifactory/custom-libs</url>
+    </repository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!--
+      Insert Dependencies Here
+      Order By:
+        1. Inherited Dependencies from Parent POM
+        2. Own Dependencies
+    -->
+  </dependencies>
+
+</project>
