@@ -17,7 +17,11 @@
 
   <name>${project.groupId}.${project.artifactId}</name>
   <description><!-- Insert Project Description Here --></description>
+  <inceptionYear><!-- Insert year of inception --></inceptionYear>
 
+  <properties>
+    <owner><!-- Insert Code Owner --></owner>
+  </properties>
 
   <build>
     <plugins>
