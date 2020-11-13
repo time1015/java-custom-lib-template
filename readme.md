@@ -6,6 +6,7 @@ This repository template is the starting point for all Custom Library repositori
 
 * Use this as a template when creating a new repository
   * Do not fork from this repository
+  * As this project has its own commits, do a `git rebase -i --root` to squash them into one commit.
 * Replace this Readme file with the appropriate documentation about the Project
 * Integrate the Project to a CI/CD pipeline (such as Travis or Jenkins)
 * Integrate the Project to a Deployment platform (such as Artifactory)
