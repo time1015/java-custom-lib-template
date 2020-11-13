@@ -47,6 +47,39 @@
     <owner><!-- Insert Code Owner --></owner>
   </properties>
 
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <id>custom-libs.time1015.me</id>
+      <name>Artifactory Repository for Custom Libraries</name>
+      <url>https://time1015.jfrog.io/artifactory/custom-libs/</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <id>custom-libs.time1015.me</id>
+      <name>Artifactory Repository for Custom Libraries</name>
+      <url>https://time1015.jfrog.io/artifactory/custom-libs/</url>
+      <layout>default</layout>
+    </pluginRepository>
+  </pluginRepositories>
+
   <build>
     <plugins>
       <plugin>
