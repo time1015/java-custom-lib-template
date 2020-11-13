@@ -18,13 +18,6 @@
   <name>${project.groupId}.${project.artifactId}</name>
   <description><!-- Insert Project Description Here --></description>
 
-  <distributionManagement>
-    <repository>
-      <id>custom-libs.time1015.me</id>
-      <name>Artifactory Repository for Custom Libraries</name>
-      <url>https://time1015.jfrog.io/artifactory/custom-libs</url>
-    </repository>
-  </distributionManagement>
 
   <build>
     <plugins>
