@@ -10,6 +10,18 @@ cache:
   directories:
     - $HOME/.m2
 
+# Install dependencies; skip everything else
+install: ./mvnw -B -V install
+  -Dlicense.skip=true
+  -Dmaven.test.skip=true
+  -Dmaven.source.skip=true
+  -Dmaven.javadoc.skip=true
+  -Dmaven.install.skip=true
+
+# Skip license checking during test
+script: ./mvnw -B test
+  -Dlicense.skip=true
+
 # Do deployment once test is successful
 deploy:
   skip_cleanup: true
