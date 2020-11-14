@@ -10,14 +10,11 @@ cache:
   directories:
     - $HOME/.m2
 
-# Skip installation. Since we cannot fully separate installing dependencies
-# from either testing or deployment, mainly for caching and time-saving
-# purposes, we might as well try and come up with creative ways to lump all of
-# the fetching of dependencies into the testing phase.
-install: skip
+# Trigger plugin dependency installation
+install: ./mvnw -B -V license:help source:help javadoc:help deploy:help
 
 # Try packaging the project as a test
-script: ./mvnw -B -V verify
+script: ./mvnw -B verify
 
 # Do deployment once test is successful
 deploy:
