@@ -10,17 +10,14 @@ cache:
   directories:
     - $HOME/.m2
 
-# Install dependencies; skip everything else
-install: ./mvnw -B -V install
-  -Dlicense.skip=true
-  -Dmaven.test.skip=true
-  -Dmaven.source.skip=true
-  -Dmaven.javadoc.skip=true
-  -Dmaven.install.skip=true
+# Skip installation. Since we cannot fully separate installing dependencies
+# from either testing or deployment, mainly for caching and time-saving
+# purposes, we might as well try and come up with creative ways to lump all of
+# the fetching of dependencies into the testing phase.
+install: skip
 
-# Skip license checking during test
-script: ./mvnw -B test
-  -Dlicense.skip=true
+# Try packaging the project as a test
+script: ./mvnw -B -V verify
 
 # Do deployment once test is successful
 deploy:
