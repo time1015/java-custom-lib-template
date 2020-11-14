@@ -27,4 +27,6 @@
 cp travis/maven-settings.xml $HOME/.m2/settings.xml
 
 # Do deployment
-./mvnw -DskipTests=true deploy -B
+./mvnw -B deploy \
+  -Dlicense.skip=true \
+  -Dmaven.test.skip=true
